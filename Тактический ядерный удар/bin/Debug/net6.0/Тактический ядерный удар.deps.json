@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Тактический ядерный удар/1.0.0": {
+        "runtime": {
+          "Тактический ядерный удар.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Тактический ядерный удар/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
