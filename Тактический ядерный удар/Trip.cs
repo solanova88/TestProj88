@@ -7,8 +7,8 @@ namespace Тактический_ядерный_удар
         public TimeSpan Time;
         public double ConsumedFuel;
         public double DistanceInMeters;
-        public object Vehicle;
-
+        public Vehicle Vehicle;
+        string? vehTitle;
         public Trip(TimeSpan time, double consumedFuel, double distanceInMeters, Vehicle vehicle)
         {
             Time = time;
@@ -18,22 +18,19 @@ namespace Тактический_ядерный_удар
         }
 
 
+
         public override string ToString()
         {
             if (Vehicle is Truck)
-            {
-                return $"Время в пути: {Time}, Потрачено топлива: {ConsumedFuel}л, Расстояние поездки: {DistanceInMeters}м, Транспортное средство: Грузовик";
-            }
+                vehTitle = "Грузовик";
             else if (Vehicle is MotorCar)
-            {
-                return $"Время в пути: {Time}, Потрачено топлива: {ConsumedFuel}л, Расстояние поездки: {DistanceInMeters}м, Транспортное средство: Легковой автомобиль";
-            }
+                vehTitle = "Легковой автомобиль";
             else if (Vehicle is Motorcycle)
-            {
-                return $"Время в пути: {Time}, Потрачено топлива: {ConsumedFuel}л, Расстояние поездки: {DistanceInMeters}м, Транспортное средство: Мотоцикл";
-            }
+                vehTitle = "Мотоцикл";
+            else if (Vehicle is Plane)
+                vehTitle = "Самолет";
 
-            return $"Время в полёте: {Time}, Потрачено топлива: {ConsumedFuel}л, Расстояние полёта: {DistanceInMeters}м, Транспортное средство: Самолет";
+            return $"Затрачено времени: {Time}, Израсходовано топлива: {ConsumedFuel}л, Пройдено расстояния: {DistanceInMeters}м, Вид транспортного средства: {vehTitle}";
 
         }
     }

@@ -13,9 +13,10 @@ public abstract class Vehicle : IMovable
 		this.FuelConsumption = fuelConsumption;
 		this.GasTankCapacity = gasTankCapacity;
 		this.Manufacturer = manufacturer;
+		
 	}
 
-	public Trip MoveToDistance(double distanceInKilometers, Vehicle vehicle)
+	public Trip MoveToDistance(double distanceInKilometers)
 	{
 		double time = distanceInKilometers / Speed;
 		double consumedFuel = FuelConsumption / 100 * distanceInKilometers;
@@ -26,8 +27,7 @@ public abstract class Vehicle : IMovable
 		else
 			Thread.Sleep(Convert.ToInt32(time * 3600000));
         
-        Trip trip = new Trip(TimeSpan.FromHours(time), consumedFuel, distanceInKilometers * 1000, vehicle);
-        Console.WriteLine(trip.ToString());
+        Trip trip = new Trip(TimeSpan.FromHours(time), consumedFuel, distanceInKilometers * 1000, this);
         return trip;
     }
 }

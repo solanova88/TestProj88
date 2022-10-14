@@ -12,9 +12,9 @@ try
         new Plane(1000, 2500, 10000, "Cessna", 20)
     };
 	Truck truck = new Truck(100, 25, 500, "Scania");
-	truck.MoveToDistance(0.1, truck);
+	Console.WriteLine(truck.MoveToDistance(0.2));
 	Plane plane = new Plane(1000, 2500, 10000, "Cessna", 20);
-	plane.MoveToDistance(1, plane);
+	Console.WriteLine(plane.MoveToDistance(1));
 
    // Console.WriteLine($"Наиболее выгодное транспортное средство: {TripHelper.GetProfitableVehicleIndex(vehicles, 0.1)}");
 }

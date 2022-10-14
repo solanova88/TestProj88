@@ -3,5 +3,5 @@ using Тактический_ядерный_удар;
 
 interface IMovable
 {
-	public Trip MoveToDistance(double distanceInKilometers, Vehicle vehicle);
+	public Trip MoveToDistance(double distanceInKilometers);
 }
